@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pranav Gupta</title>
+<meta name="description" content="Pranav Gupta: computer science student at NTU Singapore who likes problems that end in a number.">
+<meta property="og:title" content="Pranav Gupta">
+<meta property="og:description" content="Computer science at NTU Singapore. I like problems that end in a number.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0D0A14">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23FF3D6E'/%3E%3Cstop offset='.55' stop-color='%23FF7E3D'/%3E%3Cstop offset='1' stop-color='%23FFCB4A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230D0A14'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial,sans-serif' font-weight='900' font-size='30' fill='url(%23g)'%3EPG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;1,400;1,500&family=Schibsted+Grotesk:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="glow" aria-hidden="true"></div>
+<canvas id="stage" aria-hidden="true"></canvas>
+<div class="cur" aria-hidden="true"></div><div class="cur-ring" aria-hidden="true"><span class="cur-label"></span></div>
+<div class="progress" aria-hidden="true"></div>
+<a class="skip" href="#about">Skip to content</a>
+<div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Quick menu" hidden>
+  <div class="pal-box">
+    <label class="sr-only" for="pal-q">Search actions</label>
+    <input id="pal-q" type="text" placeholder="Jump to a section or run an action" autocomplete="off" spellcheck="false">
+    <ul id="pal-list" role="listbox" aria-label="Actions"></ul>
+    <p class="pal-foot"><span><kbd>↑</kbd><kbd>↓</kbd> to move</span><span><kbd>Enter</kbd> to choose</span><span><kbd>Esc</kbd> to close</span></p>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="bar pad">
+    <a class="brand" href="#top" data-magnetic>Pranav Gupta <span>CS at NTU</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work" data-magnetic>Work</a>
+      <a href="#experience" data-magnetic>Experience</a>
+      <a href="#record" data-magnetic>Record</a>
+      <a href="#contact" data-magnetic>Contact</a>
+      <a class="nav-cta" href="resume.pdf" target="_blank" rel="noopener" data-magnetic data-cursor="Open">Resume</a>
+      <button class="kbtn" type="button" id="open-palette" aria-haspopup="dialog" data-magnetic data-cursor="Menu"><kbd>⌘</kbd><kbd>K</kbd></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero pad s-ember" data-scheme="ember" id="top" aria-labelledby="hero-name">
+    <h1 class="hero-name" id="hero-name">Pranav Gupta</h1>
+    <div class="hero-foot">
+      <p class="hero-tag" data-split>Computer science at NTU Singapore. I like problems that end in a number.</p>
+      <div class="hero-meta" data-fade>
+        <span><i class="pulse" aria-hidden="true"></i>Probably reading about supercars right now</span>
+        <span>Studying in Singapore, from New Delhi</span>
+        <span class="hint"><i aria-hidden="true">↻</i>Click anywhere above to scatter the points</span>
+      </div>
+    </div>
+    <a class="scroll-cue" href="#about"><span>Scroll</span><i aria-hidden="true"></i></a>
+  </section>
+
+  <section class="statement pad s-ember" data-scheme="ember" id="about" aria-label="About">
+    <p id="statement">I grew up in New Delhi and came to NTU to study computer science. I like questions where intuition and arithmetic disagree, and the arithmetic turns out to be right. Right now that question is blackjack: I’m building a solver that finds the expected value of every move in every hand.</p>
+    <dl class="facts">
+      <div data-fade><dt>Studying</dt><dd>BComp Computer Science, Nanyang Technological University, 2026 to 2030</dd></div>
+      <div data-fade><dt>Leading</dt><dd>Coding prep at the CCDS Innovation Lab, NTU</dd></div>
+      <div data-fade><dt>Building</dt><dd>A blackjack expected-value solver with a Monte Carlo check</dd></div>
+    </dl>
+  </section>
+
+  <section class="work s-ember" data-scheme="ember" id="work" aria-labelledby="work-title">
+    <div class="sec-head pad">
+      <h2 class="sec-title" id="work-title" data-split>Selected work</h2>
+      <p class="sec-note" data-fade>Five things I’ve built or started. Keep scrolling to move through them.</p>
+    </div>
+    <div class="reel-wrap">
+      <div class="reel" id="reel">
+        <article class="panel" data-hover data-title="Carbon footprint calculator">
+          <div class="panel-text">
+            <div class="yr">2024 to 2025</div>
+            <h3>Carbon footprint calculator</h3>
+            <p>Turns appliance hours and kilometres travelled into daily, monthly and yearly CO₂, with tailored suggestions to cut it. I built the web version first, then rewrote it as a native Android app in Kotlin. It powers the workshops at My Carbon Zero.</p>
+            <div class="tags"><span>JavaScript</span><span>Chart.js</span><span>Kotlin</span><span>Android</span></div>
+            <div class="plinks"><a class="pill" href="https://github.com/PranavGupta184/CarbonFootprintCalculator" data-magnetic data-cursor="Open">Web source</a><a class="pill ghost" href="https://github.com/PranavGupta184/CarbonCalcMobile" data-magnetic data-cursor="Open">Android source</a></div>
+          </div>
+          <div class="art" aria-hidden="true">
+            <div class="phone" id="phone">
+              <div class="ph-notch"></div>
+              <p class="ph-title">Carbon footprint</p>
+              <div class="ph-row"><span>Air conditioner, 6 h</span><b>9.0 kg</b></div>
+              <div class="ph-row"><span>Car, 12 km</span><b>2.5 kg</b></div>
+              <div class="ph-row"><span>3 fans, 8 h</span><b>1.8 kg</b></div>
+              <div class="ph-row"><span>5 lights, 6 h</span><b>1.5 kg</b></div>
+              <div class="ph-row neg"><span>2 plants</span><b>−0.1 kg</b></div>
+              <div class="ph-total"><span>Daily</span><b><span data-to="14.7" data-dec="1">14.7</span> kg</b></div>
+              <div class="ph-split"><div><span>Month</span><b><span data-to="442" data-dec="0">442</span> kg</b></div><div><span>Year</span><b><span data-to="5373" data-dec="0">5,373</span> kg</b></div></div>
+            </div>
+            <span class="art-note">Example day, using the app’s own emission factors</span>
+          </div>
+        </article>
+
+        <article class="panel" data-hover data-title="HealthAssist AI">
+          <div class="panel-text">
+            <div class="yr">2025</div>
+            <h3>HealthAssist AI</h3>
+            <p>A symptom checker made with Firebase Studio. It sends your symptoms and history to Gemini 2.0 Flash through Genkit and returns ranked possible conditions with confidence scores, reasons and next steps, checked against a typed schema.</p>
+            <div class="tags"><span>Next.js</span><span>TypeScript</span><span>Genkit</span><span>Gemini</span></div>
+            <div class="plinks"><a class="pill" href="https://github.com/PranavGupta184/HealthAssist-AI" data-magnetic data-cursor="Open">Source</a></div>
+          </div>
+          <div class="art" aria-hidden="true">
+            <div class="chat" id="chat">
+              <div class="chat-in"><span>Symptoms</span>Sore throat, mild fever, tiredness</div>
+              <div class="chat-out">
+                <p class="chat-h">Possible conditions</p>
+                <div class="cond"><span>Common cold</span><i><em style="--w:62%"></em></i><b>0.62</b></div>
+                <div class="cond"><span>Influenza</span><i><em style="--w:24%"></em></i><b>0.24</b></div>
+                <div class="cond"><span>Strep throat</span><i><em style="--w:9%"></em></i><b>0.09</b></div>
+                <p class="chat-note">Not a substitute for professional medical advice.</p>
+              </div>
+              <svg class="ecg" viewBox="0 0 400 70"><path d="M0 35 H110 L122 22 L132 35 H158 L168 6 L180 64 L192 35 H226 L238 20 L252 35 H400"/></svg>
+            </div>
+            <span class="art-note">Example of the app’s output</span>
+          </div>
+        </article>
+
+        <article class="panel" data-hover data-title="My Carbon Zero">
+          <div class="panel-text">
+            <div class="yr">2024 to now, co-founder</div>
+            <h3>My Carbon Zero</h3>
+            <p>A climate platform helping small businesses work towards net-zero targets. I wrote its carbon calculator, ran awareness workshops and onboarded seven SMEs as partners.</p>
+            <div class="tags"><span>7 SME partners</span><span>Workshops</span></div>
+            <div class="plinks"><a class="pill" href="https://www.mycarbonzero.org" data-magnetic data-cursor="Visit">mycarbonzero.org</a></div>
+          </div>
+          <div class="art" aria-hidden="true">
+            <div class="zero"><i></i><i></i><i></i><i></i>
+              <span class="orbit"><u style="--a:0deg"></u><u style="--a:51.4deg"></u><u style="--a:102.8deg"></u><u style="--a:154.3deg"></u><u style="--a:205.7deg"></u><u style="--a:257.1deg"></u><u style="--a:308.6deg"></u></span>
+              <b>net 0</b>
+            </div>
+            <span class="art-note">Seven partner SMEs, one target</span>
+          </div>
+        </article>
+
+        <article class="panel" data-hover data-title="Idea Reach">
+          <div class="panel-text">
+            <div class="yr">2024 to now, founder</div>
+            <h3>Idea Reach</h3>
+            <p>Gets high school students doing applied research on environmental and social problems. Working through student councils, we have run more than 20 workshops on design thinking, data science and app development across five schools, with a team of ten.</p>
+            <div class="tags"><span>20+ workshops</span><span>5 schools</span><span>Team of 10</span></div>
+            <div class="plinks"><a class="pill" href="https://www.ideareach.org" data-magnetic data-cursor="Visit">ideareach.org</a></div>
+          </div>
+          <div class="art" aria-hidden="true">
+            <svg class="net" viewBox="0 0 300 220">
+              <g><line x1="150" y1="110" x2="60" y2="50"/><line x1="150" y1="110" x2="250" y2="44"/><line x1="150" y1="110" x2="48" y2="168"/><line x1="150" y1="110" x2="246" y2="176"/><line x1="150" y1="110" x2="150" y2="22"/><line x1="60" y1="50" x2="150" y2="22"/><line x1="250" y1="44" x2="246" y2="176"/><line x1="48" y1="168" x2="246" y2="176"/></g>
+              <circle class="spark" r="3.5" style="offset-path: path('M150 110 L60 50')"/><circle class="spark" r="3.5" style="offset-path: path('M150 110 L250 44'); animation-delay: -.6s"/><circle class="spark" r="3.5" style="offset-path: path('M150 110 L48 168'); animation-delay: -1.2s"/><circle class="spark" r="3.5" style="offset-path: path('M150 110 L246 176'); animation-delay: -1.8s"/><circle class="spark" r="3.5" style="offset-path: path('M150 110 L150 22'); animation-delay: -2.4s"/>
+              <circle cx="60" cy="50" r="8"/><circle cx="250" cy="44" r="8"/><circle cx="48" cy="168" r="8"/><circle cx="246" cy="176" r="8"/><circle cx="150" cy="22" r="8"/>
+              <circle class="ring" cx="150" cy="110" r="12"/><circle class="hub" cx="150" cy="110" r="12"/>
+            </svg>
+            <span class="art-note">Five schools, one network</span>
+          </div>
+        </article>
+
+        <article class="panel" data-hover data-title="Blackjack expected-value solver">
+          <div class="panel-text">
+            <div class="yr">2023, rebuilding in 2026 <span class="status">In progress</span></div>
+            <h3>Blackjack expected-value solver</h3>
+            <p>My first Python program was a command-line blackjack game. I’m rebuilding it into a solver that computes the exact expected value of hitting, standing, doubling and splitting for every hand, then checks each number against a Monte Carlo simulation.</p>
+            <div class="tags"><span>Python</span><span>Probability</span><span>Monte Carlo</span><span>Recursion</span></div>
+            <div class="plinks"><a class="pill" href="https://github.com/PranavGupta184/BlackJack" data-magnetic data-cursor="Open">See the original game</a></div>
+          </div>
+          <div class="art" aria-hidden="true">
+            <div class="cards" id="cards">
+              <div class="card">10<b>♣</b><span class="big">♣</span></div>
+              <div class="card r">6<b>♥</b><span class="big">♥</span></div>
+              <div class="card">?<b>&nbsp;</b><span class="big">?</span></div>
+            </div>
+            <span class="ev-chip">Hard 16 vs 10: hit</span>
+          </div>
+        </article>
+
+        <article class="panel end">
+          <h3>Everything else lives on GitHub.</h3>
+          <a class="pill" href="https://github.com/PranavGupta184" data-magnetic data-cursor="Open">Open GitHub</a>
+        </article>
+      </div>
+    </div>
+    <div class="reel-ui pad" aria-hidden="true">
+      <span class="reel-count"><b id="reel-i">01</b> of 05</span>
+      <span class="reel-name" id="reel-name">Carbon footprint calculator</span>
+      <span class="reel-track"><i id="reel-fill"></i></span>
+    </div>
+  </section>
+
+  <section class="exp pad s-light" data-scheme="light" id="experience" aria-labelledby="exp-title">
+    <div class="sec-head">
+      <h2 class="sec-title" id="exp-title" data-split>Experience</h2>
+      <p class="sec-note" data-fade>Research, competitions and the organisations I’ve helped run. Most recent first.</p>
+    </div>
+    <div class="xp-wrap">
+    <span class="xp-line" aria-hidden="true"></span>
+    <ol class="xp-list">
+      <li class="xp now" data-row><div class="when">2026 to now</div><div><h3>Coding Prep Lead</h3><p class="org">CCDS Innovation Lab, NTU</p></div><p class="desc">Run coding preparation for students at NTU’s innovation lab, and help organise Summer Build, the lab’s flagship hackathon.</p></li>
+      <li class="xp" data-row><div class="when">May to Nov 2025</div><div><h3>Research, healthcare knowledge graphs</h3><p class="org">EpicQuest Learning, with Dr Alok Nikhil Jha</p></div><p class="desc">Built a Neo4j knowledge graph over heart disease data from Kaggle and the UCI repository, combining random forest and neural network models for risk prediction. Paper under review at an SCI-indexed journal.</p></li>
+      <li class="xp" data-row><div class="when">May to Jul 2025</div><div><h3>Gold medal, Make-in-India Innovation Challenge</h3><p class="org">IIIT Delhi</p></div><p class="desc">Developed a predictive carbon footprint model for small businesses after the challenge’s data science training.</p></li>
+      <li class="xp" data-row><div class="when">Apr 2025 to Apr 2026</div><div><h3>Head Boy</h3><p class="org">Montfort Senior Secondary School, New Delhi</p></div><p class="desc">Led the student council for a school of 2,000, including a women in STEM campaign and monthly research and design thinking workshops.</p></li>
+      <li class="xp" data-row><div class="when">May to Jul 2024</div><div><h3>Gold medal, National Innovation Hackathon</h3><p class="org">IIIT Delhi</p></div><p class="desc">Co-designed a smart waste management system with the R&amp;D team. The design was granted a patent.</p></li>
+      <li class="xp" data-row><div class="when">Dec 2023 to Feb 2024</div><div><h3>Data science observership</h3><p class="org">Nxt Venture Labs, for Creditas Solutions</p></div><p class="desc">Cleaned lending datasets and built early pattern recognition models for credit default. Commended by the managing director.</p></li>
+    </ol>
+    </div>
+  </section>
+
+  <section class="record pad s-flare" data-scheme="flare" id="record" aria-labelledby="rec-title">
+    <div class="sec-head">
+      <h2 class="sec-title" id="rec-title" data-split>Record</h2>
+      <p class="sec-note" data-fade>Scores, medals and published work.</p>
+    </div>
+    <div class="nums">
+      <div><b data-count="780">780</b><span>SAT Maths<small>1520 overall</small></span></div>
+      <div><b data-count="3">3</b><span>AP exams, AP Scholar<small>Calculus BC, Statistics, Physics</small></span></div>
+      <div><b data-count="2">2</b><span>National golds<small>IIIT Delhi, 2024 and 2025</small></span></div>
+      <div><b data-count="7">7</b><span>SMEs onboarded<small>My Carbon Zero</small></span></div>
+      <div><b data-count="20" data-suffix="+">20+</b><span>Workshops run<small>Idea Reach</small></span></div>
+    </div>
+    <div class="lists">
+      <div data-fade>
+        <h3>Competitions</h3>
+        <ul>
+          <li>Finalist, International Computer Science Competition <span>2025</span></li>
+          <li>Gold, Make-in-India National Innovation Challenge <span>2025</span></li>
+          <li>Gold, IIIT Delhi National Innovation Hackathon <span>2024</span></li>
+          <li>Silver, National Children’s Science Congress <span>2024</span></li>
+        </ul>
+      </div>
+      <div data-fade>
+        <h3>Papers and patent</h3>
+        <ul>
+          <li>Design considerations for a vehicle with least CO₂ emissions <span>IJRAR</span></li>
+          <li>Nanorobotics in targeted drug delivery <span>IJRAR</span></li>
+          <li>A process for biogas generation for sustainable waste management <span>Patent</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-label="Languages and tools: Python, C++, Java, Kotlin, TypeScript, SQL, R, NumPy, pandas, Neo4j, Git, MATLAB, Next.js, Android">
+    <div class="mq-track" id="mq" aria-hidden="true">
+      <div class="mq-set"><span>Python</span><i></i><span>probability</span><i></i><span>C++</span><i></i><span>statistics</span><i></i><span>Java</span><i></i><span>linear algebra</span><i></i><span>Kotlin</span><i></i><span>Monte Carlo</span><i></i><span>TypeScript</span><i></i><span>expected value</span><i></i><span>SQL</span><i></i><span>pandas</span><i></i><span>Neo4j</span><i></i><span>markets</span><i></i></div>
+    </div>
+    <div class="mq-track" id="mq2" aria-hidden="true">
+      <div class="mq-set"><span>Android</span><i></i><span>recursion</span><i></i><span>Next.js</span><i></i><span>data science</span><i></i><span>NumPy</span><i></i><span>knowledge graphs</span><i></i><span>Git</span><i></i><span>design thinking</span><i></i><span>MATLAB</span><i></i><span>Chart.js</span><i></i><span>R</span><i></i><span>hackathons</span><i></i></div>
+    </div>
+  </div>
+
+  <section class="contact pad s-ember" data-scheme="ember" id="contact" aria-labelledby="contact-title">
+    <h2 class="contact-title" id="contact-title">Let’s talk</h2>
+    <div class="contact-body">
+      <p data-fade>About a problem, a project or an idea.</p>
+      <div class="mail" data-fade>
+        <code id="email">guptapranav404@gmail.com</code>
+        <button class="pill" type="button" id="copy" data-magnetic>Copy email</button>
+      </div>
+      <span class="copy-msg" id="copy-msg" aria-live="polite"></span>
+      <div class="plinks" data-fade>
+        <a class="pill" href="resume.pdf" target="_blank" rel="noopener" data-magnetic data-cursor="Open">View resume</a>
+        <a class="pill ghost" href="https://github.com/PranavGupta184" data-magnetic>GitHub</a>
+        <a class="pill ghost" href="https://www.linkedin.com/in/pranavgupta184" data-magnetic>LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="pad s-ember">
+  <span>© 2026 Pranav Gupta</span>
+  <span class="clock">Singapore <span id="clock">--:--</span></span>
+  <a class="to-top" href="#top" data-magnetic data-cursor="Top">Back to top</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
